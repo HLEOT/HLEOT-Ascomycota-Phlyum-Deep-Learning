@@ -73,20 +73,11 @@ gunzip fasta_dna/*
 
 
 ## Example of using AGAT tool to extract genomic features
-look at the documentation : https://agat.readthedocs.io/en/latest/tools/agat_sp_extract_sequences.html#
+documentation : https://agat.readthedocs.io/en/latest/tools/agat_sp_extract_sequences.html#
 install using: conda install -c bioconda agat
 
 ![A](https://agat.readthedocs.io/en/latest/_images/agat_sp_extract_sequences_2.png "AGAT tool"){width=200%, height=150%}
-![A](https://agat.readthedocs.io/en/latest/_images/agat_sp_extract_sequences_1.png "AGAT tool"){width=300%}
-
-this is just an example, how to do bash/shell commands within R notebooks, you can do it entirely in bash or evoking python scripting. I suggest you before running a loop for all genomes, figure out for 1 case that you are extracting correct regions, try to have a simple simulation example, make sure you are in control of what you do. 
-For ML model predictions you will need to prepare: 
- - a promoter sequence (upstream of 5'UTR, that would be a yellow intergenic1 region). The exact number of how many nucleotides you need, you will find out in the dataset/method section that I've asked you to run from the paper repository.
- - 5'UTR region, make sure when extracting it you are extracting only 5'UTR and no other regions, play widh different options of AGAT tool
- - CDS region, from this example you will later calculate features that you want to extract, that is 64 CODON counts, bacially 3mer counts. The example of how to extract DNA CDS from all genomes is in the code block bellow.
- - 3'UTR, same applies as for 5'.
- - terminator region, same as for promoter, except intergrenic2 region as on a figure.
- 
+![A](https://agat.readthedocs.io/en/latest/_images/agat_sp_extract_sequences_1.png "AGAT tool"){width=300%} 
 ```{bash}
 
 conda activate genomics #activate conda genomics environment with agat tool
